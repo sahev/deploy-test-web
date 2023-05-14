@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    testeeee
     <img alt="Vue logo" src="./assets/logo.png">
 
     <HelloWorld/>

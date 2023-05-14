@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ headerMsg }}</h1>
 
+    <h1>{{ msg }}</h1>
   </div>
 </template>
 
@@ -12,7 +13,8 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: ''
+      msg: '',
+      headerMsg: 'static msg'
     }
   },
   async created() {
