@@ -14,7 +14,7 @@ export default {
   data () {
     return {
       msg: '',
-      headerMsg: 'static msg'
+      headerMsg: 'static header msg'
     }
   },
   async created() {
