@@ -1,32 +1,28 @@
 <template>
-  <div class="hello">
-    <h1>{{ headerMsg }}</h1>
+  <div>
+    <div class="hello">
+      <h1>{{ headerMsg }}</h1>
 
-    <h1>{{ msg }}</h1>
+      <img :src="img">
+
+    </div>
+    <h2>
+      <router-link to="users">users</router-link>
+    </h2>
+
   </div>
 </template>
 
 <script>
-import axios from 'axios'
 
 export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: '',
-      headerMsg: 'static header msg'
+      img: 'https://picsum.photos/200/300',
+      headerMsg: 'random imgs'
     }
   },
-  async created() {
-    await this.getMessage()
-  },
-  methods: {
-    async getMessage() {
-      let res = await axios.get(process.env.VUE_APP_API_BASE_URL || 'http://localhost:3000')
-      this.msg = res.data
-      console.log(res, 'aqui');
-    }
-  }
 }
 </script>
 
@@ -35,14 +31,17 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }
